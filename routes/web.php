@@ -24,6 +24,7 @@ Route::post('lien-he',['as'=>'postContact', 'uses'=>'ContactController@postConta
 // Ajax load more project
 Route::get('loadmore/project','IndexController@loadmoreProject')->name('loadmoreProject');
 
+Route::get('tu-van-thiet-ke','IndexController@consutalDesign');
 
 Route::get('tim-kiem',['as'=>'search', 'uses'=>'IndexController@search']);
 Route::post('newsletter',['as'=>'postNewsletter', 'uses'=>'IndexController@postNewsletter']);
@@ -31,10 +32,7 @@ Route::get('san-pham',['as'=>'getProduct', 'uses'=>'IndexController@getProduct']
 Route::get('san-pham/{alias}.html','IndexController@getProductDetail')->name('detailProduct');
 Route::get('san-pham/{id}',['as'=>'getProductList', 'uses'=>'IndexController@getProductList']);
 Route::get('danh-muc/{alias}', 'IndexController@getProductByCate')->name('detailCategory');
-
-
 Route::get('product/filter', 'IndexController@productFilder')->name('product.filter');
-
 
 Route::get('thanh-toan',['as'=>'thanhtoan', 'uses' => 'IndexController@thanhtoan']);
 // Route::get('danh-muc/{alias}',['as'=>'getProductChild', 'uses'=>'IndexController@getProductChild']);

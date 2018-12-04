@@ -1260,7 +1260,7 @@ div[class^="ii-"] .inner {
 }
 
 .title-top {
-    border-top: 2px solid #ba0305;
+    /*border-top: 2px solid #ba0305;*/
 }
 
 .title-top .title {

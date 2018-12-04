@@ -2,39 +2,36 @@
 @section('content')
 <?php
     $setting = Cache::get('setting');
-    $about = Cache::get('about');
 ?>
-<div class="content-box content-box-page">
-    <nav aria-label="breadcrumb" class="nav-breadcrumb">
-        <div class="container">
-            <div class="row">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('')}}">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sản phẩm mẫu</li>
-                </ol>
+<content>
+    <div class="container">
+        @foreach($cate_pro as $category)
+        <div class="row"> <!-- mỗi 1 row là 1 mục  -->
+            <div class="col-xs-8 col-md-11 col-large-11 title-content">
+                <h1>{{$category->name}}</h1>
             </div>
-        </div>
-    </nav>
-    <div class="list-category">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    
-                    <div class="list-item">
-                        @foreach($products as $item)
-                        <div class="col-md-4 _item">
-                            <div class="box-item_cate">
-                                <a href="{{url('san-pham-mau/'.$item->alias.'.html')}}" title="{{$item->name}}" class="zoom"><img src="{{asset('upload/product/'.$item->photo)}}"></a>
-                                <div class="name_cate"><a href="{{url('san-pham-mau/'.$item->alias.'.html')}}" title="{{$item->name}}">{{$item->name}}</a></div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
+            <div class="col-xs-4 col-md-1 col-large-1 next-content">
+                <p><a href="{{url('san-pham/'.$category->alias)}}">Xem thêm</a></p>
+            </div>
+            <?php $products = DB::table('products')->where('com','san-pham')
+                ->where('cate_id',$category->id)
+                ->take(8)
+                ->get(); 
+            ?>
+            @foreach($products as $item)
+            <div class="col-xs-6 col-md-3 col-large-3 content" >
+                <div class="images">
+                    <a href="{{url('san-pham/'.@$item->alias.'.html')}}"><img src="{{asset('upload/product/'.@$item->photo)}}" alt="{{$item->name}}"></a>
                 </div>
-                @include('templates.sidebar_right');
+                <div class="title">
+                    <h4><a href="{{url('san-pham/'.@$item->alias.'.html')}}" title="">{{@$item->name}}</a></h4>
+                    <p>Giá: <strong>{{number_format(@$item->price)}}</strong> vnđ</p>
+                </div>
             </div>
+            @endforeach
         </div>
+        @endforeach
     </div>
-</div>
+</content>
 
 @endsection

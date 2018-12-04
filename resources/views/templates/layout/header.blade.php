@@ -97,11 +97,11 @@
         </div>
     </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- slider  -->
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <div class="carousel-inner" role="listbox">
             @foreach($sliders as $k=>$slider)
             <div class="item @if($k == 0)active @endif">

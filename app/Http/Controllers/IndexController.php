@@ -67,20 +67,14 @@ class IndexController extends Controller {
 	{
 		session_start();
     	$setting = DB::table('setting')->select()->where('id',1)->get()->first();
-    	$menu_top = DB::table('menu')->select()->where('com','menu-top')->where('status',1)->orderBy('stt','asc')->get();
-    	$dichvu = DB::table('news')->select()->where('status',1)->where('com','dich-vu')->orderBy('stt','asc')->get();
+    	
     	$cateProducts = DB::table('product_categories')->where('parent_id',0)->get();
     	$about = DB::table('about')->where('com','gioi-thieu')->get();
     	Cache::forever('setting', $setting);
-        Cache::forever('menu_top', $menu_top);
-        Cache::forever('dichvu', $dichvu);
+       
         Cache::forever('cateProducts', $cateProducts);
         Cache::forever('about', $about);
-        if(Auth::check())
-        {
-        	View::share('nguoidung',Auth::user());
-        }
-        // Cache::forever('chinhanh', $chinhanh);
+       
 	}
 
 	/**
@@ -93,7 +87,7 @@ class IndexController extends Controller {
 		
 		$news = DB::table('news')->where('status',1)->where('noibat',1)->where('com','tin-tuc')->take(2)->orderBy('id','desc')->get();
 		$products = DB::table('products')->where('status',1)->take(20)->orderBy('id','desc')->get();
-		$categories_home = DB::table('product_categories')->where('status',1)->where('noibat',1)->take(3)->orderBy('id','desc')->get();
+		$categories_home = DB::table('product_categories')->where('status',1)->where('noibat',1)->orderBy('stt','asc')->get();
 		$feedbacks = DB::table('feedback')->get();
 		$partners = DB::table('partner')->get();
 		$setting =DB::table('setting')->select()->where('id',1)->get()->first();
@@ -108,13 +102,17 @@ class IndexController extends Controller {
 	}
 	public function getProduct(Request $req)
 	{
-		$cate_pro = DB::table('product_categories')->where('status',1)->where('parent_id',0)->orderby('stt','asc')->get();
+		$cate_pro = DB::table('product_categories')
+			->where('status',1)
+			->where('parent_id',0)
+			->where('com','san-pham')
+			->orderby('stt','asc')->get();
 		
-		$products = DB::table('products')->where('status',1)->where('com','san-pham-mau')->paginate(18);
+		// $products = DB::table('products')->where('status',1)->where('com','san-pham')->paginate(18);
 		$com='san-pham';		
-		$title = "Sản phẩm mẫu";
-		$keyword = "Sản phẩm mẫu";
-		$description = "Sản phẩm mẫu";
+		$title = "Sản phẩm";
+		$keyword = "Sản phẩm";
+		$description = "Sản phẩm";
 		// $img_share = asset('upload/hinhanh/'.$banner_danhmuc->photo);
 		
 		// return view('templates.product_tpl', compact('product','banner_danhmuc','doitac','camnhan_khachhang','keyword','description','title','img_share'));
@@ -708,5 +706,10 @@ class IndexController extends Controller {
 		return view('templates.banchay', compact('cate_pro', 'colors', 'products', 'price_from', 'price_to', 'viewx', 'sortx', 'colorx', 'appends'));
 	}
 
-	
+	public function consutalDesign()
+	{
+		
+		return view('templates.consutal_design');
+	}
+
 }

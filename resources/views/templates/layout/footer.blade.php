@@ -34,17 +34,7 @@
                     <div class="fb-page" data-href="{{$setting->facebook}}" data-tabs="timeline" data-width="350" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noithaththome/" class="fb-xfbml-parse-ignore"><a href="{{$setting->facebook}}"></a></blockquote></div>
                 </div>
             </div>
-            <!-- Load Facebook SDK for JavaScript -->
-            <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2';
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-
-
+          
         </div>
     </div>
 </footer>

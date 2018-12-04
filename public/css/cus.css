@@ -1,0 +1,46 @@
+.indexx{
+	position: relative;
+	display: flex;
+}
+.indexx .logo_home{
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	z-index: 9999;
+}
+.indexx .leftx{
+	width: 50%;
+	border-right: 1px solid red;
+	position: relative;
+}
+.indexx .leftx img, .indexx .rightx img{
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+}
+.indexx .rightx{
+	width: 50%;
+	position: relative;
+}
+.text_left_home a, .text_right_home a{
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FF8902;
+}
+.text_left_home {
+	position: absolute;
+	left: 33%;
+	/*right: 50%;*/
+	/*margin:0 auto;*/
+	/*text-align: center;*/
+	top:50%;
+}
+.text_right_home{
+	position: absolute;
+	right: 40%;
+	/*right: 50%;*/
+	/*margin:0 auto;*/
+	/*text-align: center;*/
+	top:50%;
+}

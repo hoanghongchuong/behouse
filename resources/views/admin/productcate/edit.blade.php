@@ -103,10 +103,10 @@
 	            </div>
 	            <div class="clearfix"></div>
 			    <div class="col-md-6">
-			    	<!-- <div class="form-group">
+			    	<div class="form-group">
 					      <label for="ten">Số thứ tự</label>
 					      <input type="number" min="1" name="stt" value="{!! isset($data->stt) ? $data->stt : (count($parent)+1) !!}" class="form-control" style="width: 100px;">
-				    </div> -->
+				    </div>
 				   
 				    <div class="form-group">
 					    <label>
@@ -125,7 +125,7 @@
 			    <div class="box-footer col-md-12 row">
 					<div class="col-md-6">
 				    	<button type="submit" class="btn btn-primary">Cập nhật</button>
-				    	<button type="button" onclick="javascript:window.location='backend/productcate'" class="btn btn-danger">Thoát</button>
+				    	<!-- <button type="button" onclick="javascript:window.location='backend/productcate'" class="btn btn-danger">Thoát</button> -->
 			    	</div>
 			  	</div>
 		    </form>

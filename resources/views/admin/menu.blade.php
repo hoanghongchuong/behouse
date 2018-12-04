@@ -2,13 +2,13 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <ul class="sidebar-menu">            
-            <li class="treeview {{@$_GET['type'] == 'san-pham' ? 'active' : '' }}">
+            <li class="treeview {{ Request::segment(2) == 'productcate' || Request::segment(2) == 'product' ? 'active' : '' }}">
               <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Quản lý sản phẩm</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="backend/productcate?type=san-pham"><i class="fa fa-circle-o"></i> <span>Danh mục sản phẩm</span></a></li>
-                <li><a href="backend/product?type=san-pham"><i class="fa fa-circle-o"></i> <span>Danh sách</span></a></li>
+                <li class="{{ Request::segment(2) == 'productcate' ? 'active' : '' }}"><a href="backend/productcate?type=san-pham"><i class="fa fa-circle-o"></i> <span>Danh mục sản phẩm</span></a></li>
+                <li class="{{Request::segment(2) == 'product' ? 'active' : ''}}"><a href="backend/product?type=san-pham"><i class="fa fa-circle-o"></i> <span>Danh sách</span></a></li>
               </ul>
             </li>
             <!-- <li><a href="backend/orders"><i class="fa fa-shopping-cart"></i> <span>Quản lý đơn hàng</span></a></li> -->
