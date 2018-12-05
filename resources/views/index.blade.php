@@ -37,7 +37,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/css/stylect.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/css/jquery.fancybox.min.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('public/css/cus.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{asset('public/css/responsive.css')}}">
     <script type="text/javascript" src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
     
     <script type="text/javascript">
@@ -51,9 +53,9 @@
 </head>
 <body>
     <div class="main-wrapper">
-        @if(@$com!='index')
+        @if(@$com !='index')
             @include('templates.layout.header')
-        @endif
+       @endif        
             @yield('content')
         @if(@$com!='index')
             @include('templates.layout.footer')
@@ -73,6 +75,7 @@
     @yield('script')
     <script type="text/javascript" src="{{asset('public/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('public/js/owl.carousel.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/js/jquery.fancybox.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('public/js/cus.js')}}"></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+@media (max-width: 767px){
+	/*.box1-right, .box1-left{
+		width: 100%;
+	}*/
+}
+
+@media (min-width: 768px) and (max-width: 999px){
+	.slider-for{
+		height: 400px;
+	}
+	
+}
+@media (min-width: 1000px) {
+	
+}
+@media (min-width: 1200px){
+	
+}

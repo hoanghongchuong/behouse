@@ -20,12 +20,11 @@ class ContactController extends Controller {
 		$description = "Liên hệ";
 		$img_share = '';
 		$com='lien-he';
-		$chinhanhx = DB::table('chinhanh')->select()->get();
 		$about_lienhe = DB::table('about')->select()->where('com','lien-he')->get()->first();
 		$banner_danhmuc = DB::table('lienket')->select()->where('status',1)->where('com','chuyen-muc')->where('link','lien-he')->get()->first();
-		// $chinhanh = DB::table('lienket')->select()->where('status',1)->where('com','chi-nhanh')->orderBy('stt','asc')->get();
+		$com='lien-he';
 		// End cấu hình SEO
-        return view('templates.contact_tpl', compact('banner_danhmuc','lien-he','chinhanh','about_lienhe','keyword','description','title','img_share','com','chinhanhx'));
+        return view('templates.contact_tpl', compact('banner_danhmuc','lien-he','chinhanh','about_lienhe','keyword','description','title','img_share','com','com'));
     }
 
     /**

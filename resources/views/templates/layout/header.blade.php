@@ -15,26 +15,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                        <a href="#"><img style="padding-top: 15px;" src="{{asset('upload/hinhanh/'.$setting->photo)}}"></a>
+                        <a href="{{url('')}}"><img style="padding-top: 15px;" src="{{asset('upload/hinhanh/'.$setting->photo)}}"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
+                        @if(@$com=='tuvan')
+                            <ul class="nav navbar-nav menu">
+                            <li><a href="{{url('')}}">Trang chủ</a></li>
+                            <li><a href="{{url('gioi-thieu')}}">Giới thiệu</a></li>
+                            <li><a href="">Thiết kế</a></li>
+                            <li><a href="">Văn phòng</a></li>
+                            <li><a href="">Ý tưởng</a></li>
+                        @else
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Trang chủ</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
+                            <li class="active"><a href="{{url('')}}">Trang chủ</a></li>
+                            <li><a href="{{url('gioi-thieu')}}">Giới thiệu</a></li>
+                            @foreach($categories as $category)
+                            <li><a href="{{url('san-pham/'.$category->alias)}}">{{$category->name}}</a></li>
+                            @endforeach
                         </ul>
+                        @endif
                     </div>
                 </div>
             </nav>
@@ -83,6 +82,16 @@
                         <a href="{{url('')}}"><img style="padding-top: 15px;" src="{{asset('upload/hinhanh/'.$setting->photo)}}"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse list">
+                        @if(@$com=='tuvan')
+                            <ul class="nav navbar-nav menu">
+                            <li><a href="{{url('')}}">Trang chủ</a></li>
+                            <li><a href="{{url('gioi-thieu')}}">Giới thiệu</a></li>
+                            <li><a href="">Thiết kế</a></li>
+                            <li><a href="">Văn phòng</a></li>
+                            <li><a href="">Ý tưởng</a></li>
+                            
+                        </ul>
+                        @else
                         <ul class="nav navbar-nav menu">
                             <li><a href="{{url('')}}">Trang chủ</a></li>
                             <li><a href="{{url('gioi-thieu')}}">Giới thiệu</a></li>
@@ -90,12 +99,16 @@
                             <li><a href="{{url('san-pham/'.$category->alias)}}">{{$category->name}}</a></li>
                             @endforeach
                         </ul>
+                        @endif
                     </div>
+
+
                 </div>
             </nav>
 
         </div>
     </div>
+    @if(@$com !='tuvan')
     <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- slider  -->
         <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -118,5 +131,5 @@
             <span class="sr-only">Next</span>
           </a>
     </div>
-    
+    @endif
 </header>

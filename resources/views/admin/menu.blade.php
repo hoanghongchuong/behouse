@@ -20,6 +20,7 @@
             <!-- <li><a href="backend/newsletter?type=newsletter"><i class="fa fa-circle-o"></i> <span>Đăng ký nhận tin</span></a></li> -->
             <!-- <li><a href="backend/chinhanh"><i class="fa fa-envelope"></i><span>Quản lý cửa hàng</span></a></li> -->
             <li><a href="backend/slider?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Quản lý slider</span></a></li>
+            <li><a href="backend/slider?type=home"><i class="fa fa-circle-o"></i> <span>Quản lý banner trang chủ</span></a></li>
             <!-- <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>

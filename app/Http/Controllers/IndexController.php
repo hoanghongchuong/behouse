@@ -207,9 +207,9 @@ class IndexController extends Controller {
 			$keyword = $product_detail->keyword;
 			$description = $product_detail->description;
 			$img_share = asset('upload/product/'.$product_detail->photo);
-			
+			$com='san-pham';
 			// End cấu hình SEO
-			return view('templates.product_detail_tpl', compact('product_detail','banner_danhmuc','keyword','description','title','img_share','product_khac','album_hinh','cateProduct','productSameCate','tintucs','cate_pro','colors', 'productDaXem'));
+			return view('templates.product_detail_tpl', compact('product_detail','banner_danhmuc','keyword','description','title','img_share','product_khac','album_hinh','cateProduct','productSameCate','tintucs','cate_pro','com', 'productDaXem'));
 		}else{
 			return redirect()->route('getErrorNotFount');
 		}
@@ -708,8 +708,8 @@ class IndexController extends Controller {
 
 	public function consutalDesign()
 	{
-		
-		return view('templates.consutal_design');
+		$com = 'tuvan';
+		return view('templates.consutal_design',compact('com'));
 	}
 
 }
