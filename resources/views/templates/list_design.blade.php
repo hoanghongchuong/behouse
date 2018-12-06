@@ -1,7 +1,9 @@
 @extends('index')
 @section('content')
 <div class="banner_idea">
-	<img src="{{asset('public/images/ytuong.jpg')}}">
+	@if($data->background !='')
+	<img src="{{asset('upload/news/'.$data->background)}}">
+	@endif
 	<div class="info-brecrum">
 		<h1>{{$data->name}}</h1>
 		<p><a href="{{url('/')}}" title="">Trang chủ</a> / {{$data->name}}</p>

@@ -75,18 +75,18 @@
 									<input type="hidden" name="txtCom" value="{{ @$_GET['type'] }}"/>
 								</div>
 								<div class="col-md-6 col-xs-12">
-									@if($_GET['type']=='dich-vu')
+									@if($_GET['type']=='thiet-ke')
 									<div class="form-group @if ($errors->first('fImagesBg')!='') has-error @endif">
 										<div class="form-group">
 											<div class="img_backgound">
 												<img src="{{ asset('upload/news/'.$data->background) }}" onerror="this.src='{{asset('public/admin_assets/images/no-image.jpg')}}'" width="200"  alt="NO PHOTO" />
 												<input type="hidden" name="img_current2" value="{!! @$data->background !!}">
 												@if(!empty($data->background))
-												<a href="{!! asset('admin/newscate/edit?id='.$id.'&type='.@$_GET['type'].'&delete_bg='.@$data->background) !!}" class="img_bg"><img src="{!! asset('public/admin_assets/images/del.png') !!}" alt="Xóa hình"></a>
+												<a href="{!! asset('backend/newscate/edit?id='.$id.'&type='.@$_GET['type'].'&delete_bg='.@$data->background) !!}" class="img_bg"><img src="{!! asset('public/admin_assets/images/del.png') !!}" alt="Xóa hình"></a>
 												@endif
 											</div>
 										</div>
-										<label for="file">Chọn background</label>
+										<label for="file">Chọn banner</label>
 								     	<input type="file" id="file" name="fImagesBg" >
 								    	<p class="help-block">Width:225px - Height: 162px</p>
 								    	@if ($errors->first('fImagesBg')!='')

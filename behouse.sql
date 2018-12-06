@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 03, 2018 lúc 05:51 AM
+-- Thời gian đã tạo: Th12 06, 2018 lúc 11:20 AM
 -- Phiên bản máy phục vụ: 10.1.36-MariaDB
 -- Phiên bản PHP: 7.2.10
 
@@ -554,6 +554,17 @@ CREATE TABLE `news` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `news`
+--
+
+INSERT INTO `news` (`id`, `cate_id`, `user_id`, `name`, `alias`, `photo`, `background`, `mota`, `content`, `status`, `noibat`, `home`, `title`, `keyword`, `description`, `com`, `stt`, `created_at`, `updated_at`) VALUES
+(1, 0, 8, 'Top 100 công ty thiết kế nội thất lớn nhất thế giới năm 2015', 'top-100-cong-ty-thiet-ke-noi-that-lon-nhat-the-gioi-nam-2015', '1544001168_y1.jpg', '1544062126_detail.jpg', NULL, '<p>Danh s&aacute;ch dưới đ&acirc;y tổng hợp 100 c&ocirc;ng ty thiết kế nội thất lớn nhất thế giới năm 2015 t&iacute;nh theo quy m&ocirc;, doanh thu, số lượng nh&acirc;n vi&ecirc;n thiết kế&hellip;</p>\r\n<p><strong>1</strong><strong>.<a href=\"http://www.gensler.com/\" target=\"_blank\" rel=\"nofollow\">Gensler</a></strong></p>\r\n<p>Trụ sở: San Francisco</p>\r\n<p>Tổng ph&iacute; thiết kế: 478.803 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 14364 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 96 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 1997</p>\r\n<p><strong>2</strong><strong>.<a href=\"http://www.hok.com/\" target=\"_blank\" rel=\"nofollow\">HOK</a></strong></p>\r\n<p>Trụ sở: St. Louis</p>\r\n<p>Tổng ph&iacute; thiết kế: 143 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 4681 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 53 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 295</p>\r\n<p><strong>3</strong><strong>.<a href=\"http://www.hba.com/\" target=\"_blank\" rel=\"nofollow\">HBA / Hirsch Bedner Associates</a></strong></p>\r\n<p>Trụ sở: Santa Monica</p>\r\n<p>Tổng ph&iacute; thiết kế: 129 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 7748.4 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 73.8 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 1538</p>\r\n<p><strong>4</strong><strong>.<a href=\"http://perkinswill.com/\" target=\"_blank\" rel=\"nofollow\">Perkins+WIll</a></strong></p>\r\n<p>Trụ sở: Chicago</p>\r\n<p>Tổng ph&iacute; thiết kế: 129 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 5700 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 34 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 333</p>\r\n<p><strong>5</strong><strong>.<a href=\"http://www.jacobs.com/\" target=\"_blank\" rel=\"nofollow\">Jacobs</a></strong></p>\r\n<p>Trụ sở: Pasadena</p>\r\n<p>Tổng ph&iacute; thiết kế: 124.609 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 2242.97 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 24.92 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 487</p>\r\n<p><strong>6</strong><strong>.<a href=\"http://www.stantec.com/\" target=\"_blank\" rel=\"nofollow\">Stantec</a></strong></p>\r\n<p>Trụ sở: Edmonton</p>\r\n<p>Tổng ph&iacute; thiết kế: 86.5 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 1081.25 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 12.72 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 593</p>\r\n<p><strong>7</strong><strong>.<a href=\"http://www.interiorarchitects.com/\" target=\"_blank\" rel=\"nofollow\">IA Interior Architects</a></strong></p>\r\n<p>Trụ sở: San Francisco</p>\r\n<p>Tổng ph&iacute; thiết kế: 82.613 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 1578 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 29.14 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 356</p>\r\n<p><strong>8</strong><strong>.<a href=\"http://www.callison.com/\" target=\"_blank\" rel=\"nofollow\">Callison</a></strong></p>\r\n<p>Trụ sở: Seattle</p>\r\n<p>Tổng ph&iacute; thiết kế: 77.51 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 136</p>\r\n<p><strong>9</strong><strong>.<a href=\"http://noithatblue.com/\" target=\"_blank\" rel=\"nofollow\">Nelson</a></strong></p>\r\n<p>Trụ sở: Philadelphia</p>\r\n<p>Tổng ph&iacute; thiết kế: 70.548 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 29.8 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 303</p>\r\n<p><strong>10</strong><strong>.<a href=\"http://www.leoadaly.com/\" target=\"_blank\" rel=\"nofollow\">Leo A Daly</a></strong></p>\r\n<p>Trụ sở: Omaha</p>\r\n<p>Tổng ph&iacute; thiết kế: 65.463 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 181</p>\r\n<p><strong>11</strong><strong>.<a href=\"http://www.som.com/\" target=\"_blank\" rel=\"nofollow\">Skidmore, Owings &amp; Merrill</a></strong></p>\r\n<p>Trụ sở: New York</p>\r\n<p>Tổng ph&iacute; thiết kế: 64.739 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 140</p>\r\n<p><strong>12</strong><strong>.<a href=\"http://www.hksinc.com/\" target=\"_blank\" rel=\"nofollow\">HKS</a></strong></p>\r\n<p>Trụ sở: Dallas</p>\r\n<p>Tổng ph&iacute; thiết kế: 61 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 764</p>\r\n<p><strong>13</strong><strong>.<a href=\"http://www.dbb.com/\" target=\"_blank\" rel=\"nofollow\">DB &amp; B</a></strong></p>\r\n<p>Trụ sở: Singapore</p>\r\n<p>Tổng ph&iacute; thiết kế: 60 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 41 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 3.2 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 151</p>\r\n<p><strong>14</strong><strong>.&nbsp;<a href=\"http://www.cannondesign.com/\" target=\"_blank\" rel=\"nofollow\">CannonDesign</a></strong></p>\r\n<p>Trụ sở: Chicago</p>\r\n<p>Tổng ph&iacute; thiết kế: 59 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 21 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 175</p>\r\n<p><strong>15</strong><strong>.NBBJ</strong></p>\r\n<p>Trụ sở: Seattle</p>\r\n<p>Tổng ph&iacute; thiết kế: 57.483 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 208</p>\r\n<p><strong>16</strong><strong>.<a href=\"http://www.nbbj.com/\" target=\"_blank\" rel=\"nofollow\">Perkins Eastman</a></strong></p>\r\n<p>Trụ sở: New York</p>\r\n<p>Tổng ph&iacute; thiết kế: 54.25 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 1085 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 5.87 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 214</p>\r\n<p><strong>17</strong><strong>.<a href=\"http://www.ccd.com.hk/en/index.aspx\" target=\"_blank\" rel=\"nofollow\">CCD/ChengChung .Design (HK)</a></strong></p>\r\n<p>Trụ sở: Shenzhen, China</p>\r\n<p>Tổng ph&iacute; thiết kế: 53 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 230 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 4.2 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 393</p>\r\n<p><strong>18</strong><strong>.<a href=\"http://www.aecom.com/\" target=\"_blank\" rel=\"nofollow\">AECOM Technology</a></strong></p>\r\n<p>Trụ sở: Los Angeles</p>\r\n<p>Tổng ph&iacute; thiết kế: 52 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 4000 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 15 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 153</p>\r\n<p><strong>19</strong><strong>.<a href=\"http://www.wilsonassociates.com/\" target=\"_blank\" rel=\"nofollow\">Wilson Associates</a></strong></p>\r\n<p>Trụ sở: Dallas</p>\r\n<p>Tổng ph&iacute; thiết kế: 46 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 3000 (triệu USD)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 360</p>\r\n<p><strong>20</strong><strong>.<a href=\"http://www.mmoser.com/\" target=\"_blank\" rel=\"nofollow\">M Moser Associates</a></strong></p>\r\n<p>Trụ sở: Hong Kong</p>\r\n<p>Tổng ph&iacute; thiết kế: 43.02 (triệu USD)</p>\r\n<p>Gi&aacute; trị c&ocirc;ng việc ho&agrave;n th&agrave;nh: 600 (triệu USD)</p>\r\n<p>Diện t&iacute;ch thực hiện: 9.1 (triệu m2)</p>\r\n<p>Số lượng nh&acirc;n vi&ecirc;n thiết kế: 340</p>', 1, 1, 0, NULL, NULL, NULL, 'y-tuong', 1, '2018-12-06 02:27:23', '2018-12-06 02:27:23'),
+(2, 0, 8, 'Căn hộ Penthouse có thiết kế nội thất trong mơ tại Jerusalem – Isarel', 'can-ho-penthouse-co-thiet-ke-noi-that-trong-mo-tai-jerusalem-–-isarel', '1544063676_y2.jpg', 'about.jpg', NULL, '<p><strong>Căn Penthouse đ&aacute;ng mơ ước n&agrave;y được người ta gọi với c&aacute;i t&ecirc;n l&agrave; &ldquo;Jerusalem Dream&rdquo; . Nằm tại trung t&acirc;m th&agrave;nh phố Jerusalem, Isarel một trong những th&agrave;nh phố cổ xưa nhất tr&ecirc;n thế giới. Với diện t&iacute;ch hơn 600m2, căn Penthouse n&agrave;y được thiết kế với một phong c&aacute;ch trang nh&atilde; v&agrave; xa xỉ.</strong></p>\r\n<p><em><strong>Xem to&agrave;n bộ thiết kế căn&nbsp;penthouse n&agrave;y:</strong></em></p>', 1, 1, 0, NULL, NULL, NULL, 'y-tuong', 2, '2018-12-06 02:34:39', '2018-12-06 02:34:39'),
+(3, 0, 8, 'Thiết kế nội thất nhà hàng ẩm thực và rượu vang Chefs Club New York – Mỹ', 'thiet-ke-noi-that-nha-hang-am-thuc-va-ruou-vang-chefs-club-new-york-–-my', '1544065495_y3.jpg', '', NULL, NULL, 1, 1, 0, NULL, NULL, NULL, 'y-tuong', 3, '2018-12-06 03:04:58', '2018-12-06 03:04:58'),
+(4, 3, 8, 'Thiết kế chung cư 1', 'thiet-ke-chung-cu-1', '1544082411_t1.jpg', '', 'Trụ sở làm việc công ty Hatexco Địa điểm: Tầng 06, Imperial Garden, 203 Nguyễn Huy Tưởng, Hà Nội Diện tích: 600 m2 Năm hoàn thành: 2017', '<p>Nội dung b&agrave;i viết thiết kế chung cư</p>', 1, 0, 0, NULL, NULL, NULL, 'thiet-ke', 1, '2018-12-06 08:09:39', '2018-12-06 08:09:39'),
+(5, 3, 8, 'thiết kế chung cư 2', 'thiet-ke-chung-cu-2', '1544082601_t2.jpg', '', NULL, '<p>Nội dung thiết kế</p>', 1, 0, 0, NULL, NULL, NULL, 'thiet-ke', 2, '2018-12-06 07:50:01', '2018-12-06 07:50:01');
+
 -- --------------------------------------------------------
 
 --
@@ -602,6 +613,16 @@ CREATE TABLE `news_categories` (
   `background` text COLLATE utf8_unicode_ci,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `news_categories`
+--
+
+INSERT INTO `news_categories` (`id`, `name`, `alias`, `photo`, `mota`, `status`, `lever`, `parent_id`, `title`, `keyword`, `description`, `com`, `stt`, `created_at`, `background`, `updated_at`) VALUES
+(1, 'Thiết kế', 'thiet-ke', '', NULL, 1, 0, 0, NULL, NULL, NULL, 'thiet-ke', 1, '2018-12-06 10:11:08', '', '2018-12-06 10:11:08'),
+(2, 'Văn phòng', 'van-phong', '', NULL, 1, 0, 0, NULL, NULL, NULL, 'thiet-ke', 2, '2018-12-06 07:33:53', '', '2018-12-06 07:33:53'),
+(3, 'Chung cư', 'chung-cu', '', NULL, 1, 0, 1, NULL, NULL, NULL, 'thiet-ke', 3, '2018-12-06 10:12:30', '1544091150_about.jpg', '2018-12-06 10:12:30'),
+(4, 'Biệt thự', 'biet-thu', '', NULL, 1, 0, 1, NULL, NULL, NULL, 'thiet-ke', 4, '2018-12-06 07:40:17', '', '2018-12-06 07:40:17');
 
 -- --------------------------------------------------------
 
@@ -714,7 +735,8 @@ INSERT INTO `products` (`id`, `user_id`, `cate_id`, `code`, `color_id`, `stt`, `
 (1, 0, 1, NULL, NULL, 1, 'Sản phẩm demo 1', 'san-pham-demo-1', '1543806900_anh1.png', 400000, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 03:15:00', '2018-12-03 03:15:00'),
 (2, 0, 1, 'ab12', NULL, 2, 'Sản phẩm demo 2', 'san-pham-demo-2', '1543807268_anh1.png', 1500000, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 03:21:08', '2018-12-03 03:21:08'),
 (3, 8, 1, 'ab123', 'null', 3, 'san pham mau 3', 'san-pham-mau-3', '1543807291_anh1.png', 4000000, 0, 0, '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 03:51:13', '2018-12-03 03:51:13'),
-(4, 0, 1, 'sdf s', NULL, 4, 'Sản phẩm demo 4', 'san-pham-demo-4', '1543807411_anh1.png', 6000000, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 03:23:31', '2018-12-03 03:23:31');
+(4, 0, 1, 'sdf s', NULL, 4, 'Sản phẩm demo 4', 'san-pham-demo-4', '1543807411_anh1.png', 6000000, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 03:23:31', '2018-12-03 03:23:31'),
+(5, 0, 2, NULL, NULL, 5, 'bàn trà 1', 'ban-tra-1', '1543821426_anh1.png', 1500000, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 'san-pham', 1, NULL, NULL, NULL, '2018-12-03 07:17:06', '2018-12-03 07:17:06');
 
 -- --------------------------------------------------------
 
@@ -746,13 +768,13 @@ CREATE TABLE `product_categories` (
 --
 
 INSERT INTO `product_categories` (`id`, `parent_id`, `stt`, `name`, `alias`, `photo`, `noibat`, `mota`, `status`, `lever`, `com`, `title`, `keyword`, `description`, `created_at`, `updated_at`) VALUES
-(1, 0, NULL, 'Sofa', 'sofa', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:23', '2018-12-03 04:47:23'),
-(2, 0, NULL, 'Bàn trà', 'ban-tra', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:46', '2018-12-03 04:47:46'),
-(3, 0, NULL, 'Bàn ghế', 'ban-ghe', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:50', '2018-12-03 04:47:50'),
-(4, 0, NULL, 'Giường', 'giuong', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:55', '2018-12-03 04:47:55'),
-(5, 0, NULL, 'Đèn', 'den', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:59', '2018-12-03 04:47:59'),
-(6, 0, NULL, 'Đồ decor', 'do-decor', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:48:03', '2018-12-03 04:48:03'),
-(7, 0, NULL, 'Thảm', 'tham', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 04:47:41', '2018-12-03 04:47:41');
+(1, 0, 1, 'Sofa', 'sofa', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:22:05', '2018-12-03 07:22:05'),
+(2, 0, 2, 'Bàn trà', 'ban-tra', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:49', '2018-12-03 07:21:49'),
+(3, 0, 3, 'Bàn ghế', 'ban-ghe', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:08', '2018-12-03 07:21:08'),
+(4, 0, 4, 'Giường', 'giuong', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:14', '2018-12-03 07:21:14'),
+(5, 0, 5, 'Đèn', 'den', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:19', '2018-12-03 07:21:19'),
+(6, 0, 6, 'Đồ decor', 'do-decor', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:24', '2018-12-03 07:21:24'),
+(7, 0, 7, 'Thảm', 'tham', '', 1, NULL, 1, 0, 'san-pham', NULL, NULL, NULL, '2018-12-03 07:21:29', '2018-12-03 07:21:29');
 
 -- --------------------------------------------------------
 
@@ -907,7 +929,7 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id`, `name`, `title`, `company`, `website`, `address`, `phone`, `hotline`, `fax`, `email`, `photo`, `photo_footer`, `photo_page`, `favico`, `title_index`, `mota`, `content`, `facebook`, `twitter`, `skype`, `google`, `youtube`, `status`, `toado`, `copyright`, `iframemap`, `codechat`, `analytics`, `keyword`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Behouse', 'Behouse', 'Behouse', 'acb.vn', 'Vạn Phúc, Hà Nội', '0987654321', '0987654321', 'psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type tras as been the industry\'s standard', 'chuonghoanghong@gmail.com', '1543656659_logo.png', '1543656659_logo1.png', '1542771860_logo1.png', '1543656659_logo.png', NULL, NULL, NULL, 'https://www.facebook.com/FacebookforDevelopers/', 'https://twitter.com/?lang=vi', NULL, 'https://plus.google.com/?hl=vi', 'https://www.youtube.com/', 1, NULL, NULL, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7749747466096!2d105.82069491439643!3d21.00165548601309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8429ac32cb%3A0x592668996cef591f!2zMzE1IFRyxrDhu51uZyBDaGluaCwgS2jGsMahbmcgVGjGsOG7o25nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1531887013298\" width=\"600\" height=\"250\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', NULL, NULL, NULL, NULL, '2018-12-03 04:31:51', '2018-12-03 04:31:51');
+(1, 'Behouse', 'Behouse', 'Behouse', 'acb.vn', 'Vạn Phúc, Hà Nội', '0987654321', '0987654321', 'psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type tras as been the industry\'s standard', 'acb@gmail.com', '1543656659_logo.png', '1543820186_logo-footer.png', '1542771860_logo1.png', '1543656659_logo.png', NULL, NULL, NULL, 'https://www.facebook.com/FacebookforDevelopers/', 'https://twitter.com/?lang=vi', NULL, 'https://plus.google.com/?hl=vi', 'https://www.youtube.com/', 1, NULL, NULL, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7749747466096!2d105.82069491439643!3d21.00165548601309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8429ac32cb%3A0x592668996cef591f!2zMzE1IFRyxrDhu51uZyBDaGluaCwgS2jGsMahbmcgVGjGsOG7o25nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1531887013298\" width=\"600\" height=\"250\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', NULL, NULL, NULL, NULL, '2018-12-03 07:06:53', '2018-12-03 07:06:53');
 
 -- --------------------------------------------------------
 
@@ -940,7 +962,10 @@ CREATE TABLE `slider` (
 
 INSERT INTO `slider` (`id`, `user_id`, `name`, `link`, `photo`, `photo1`, `photo2`, `icon`, `mota`, `content`, `status`, `noibat`, `com`, `stt`, `created_at`, `updated_at`) VALUES
 (1, 8, '1', NULL, '1543802926_banner.jpg', '', '', NULL, NULL, NULL, 1, 0, 'gioi-thieu', 1, '2018-12-03 02:08:46', '2018-12-03 02:08:46'),
-(2, 8, '2', NULL, '1543803667_banner.jpg', '', '', NULL, NULL, NULL, 1, 0, 'gioi-thieu', 2, '2018-12-03 02:21:07', '2018-12-03 02:21:07');
+(2, 8, '2', NULL, '1543803667_banner.jpg', '', '', NULL, NULL, NULL, 1, 0, 'gioi-thieu', 2, '2018-12-03 02:21:07', '2018-12-03 02:21:07'),
+(3, 8, '1', NULL, '1543975077_slider.jpg', '', '', NULL, NULL, NULL, 1, 0, 'home', 1, '2018-12-05 01:57:57', '2018-12-05 01:57:57'),
+(4, 8, '2', NULL, '1543975090_slider.jpg', '', '', NULL, NULL, NULL, 1, 0, 'home', 2, '2018-12-05 01:58:10', '2018-12-05 01:58:10'),
+(5, 8, '1', NULL, '1544001061_ytuong.jpg', '', '', NULL, NULL, NULL, 1, 0, 'y-tuong', 1, '2018-12-05 09:11:01', '2018-12-05 09:11:01');
 
 -- --------------------------------------------------------
 
@@ -1313,7 +1338,7 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `counter`
@@ -1367,7 +1392,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `newsletter`
@@ -1379,7 +1404,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT cho bảng `news_categories`
 --
 ALTER TABLE `news_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `pages`
@@ -1397,7 +1422,7 @@ ALTER TABLE `partner`
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `product_categories`
@@ -1427,7 +1452,7 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT cho bảng `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `slogan`

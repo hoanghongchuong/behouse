@@ -75,9 +75,9 @@
 								</div>
 								<div class="col-md-6 col-xs-12">
 									<div class="col-md-6 col-xs-12">
-										@if($_GET['type']=='dich-vu')
+										@if($_GET['type']=='thiet-ke')
 										<div class="form-group col-md-12 @if ($errors->first('fImagesBg')!='') has-error @endif">
-											<label for="file">File background</label>
+											<label for="file">File banner</label>
 									     	<input type="file" id="file" name="fImagesBg" >
 									    	<p class="help-block">Width:225px - Height: 162px</p>
 									    	@if ($errors->first('fImagesBg')!='')

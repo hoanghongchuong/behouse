@@ -112,7 +112,7 @@ class NewsCateController extends Controller {
                 File::delete($background);
                 $data->background='';
                 $data->update();
-                return redirect('backend/news?edit&id='.$id.'&type='.$com)->with('status','Xóa backgound thành công !');
+                return redirect()->back()->with('status','Xóa backgound thành công !');
             }
             $parent = NewsCate::orderBy('stt', 'asc')->where('com' , $com)->get()->toArray();
            // Gọi view edit.blade.php hiển thị bải viết
