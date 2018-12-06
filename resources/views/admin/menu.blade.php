@@ -12,8 +12,31 @@
               </ul>
             </li>
             <!-- <li><a href="backend/orders"><i class="fa fa-shopping-cart"></i> <span>Quản lý đơn hàng</span></a></li> -->
-            <li><a href="backend/about/edit?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Giới thiệu</span></a></li>           
-            <!-- <li><a href="backend/news?type=tin-tuc"><i class="fa fa-circle-o"></i> <span>Tin tức</span></a></li> -->
+            <li><a href="backend/about/edit?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Giới thiệu</span></a></li>
+            <li class="treeview">
+                <a href="javascript:;">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Thiết kế</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">            
+                    <li class="{{ Request::segment(2) == 'newscate' ? 'active' : '' }}"><a href="backend/newscate?type=thiet-ke"><i class="fa fa-circle-o"></i> <span>Danh mục thiết kế</span></a></li>
+                    <li class=""><a href="backend/news?type=thiet-ke"><i class="fa fa-circle-o"></i> <span>Danh sách</span></a></li>
+                   
+                </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Ý tưởng</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">            
+                
+                <li><a href="backend/slider?type=y-tuong"><i class="fa fa-gear" aria-hidden="true"></i> <span>Banner</span></a></li>
+                <li><a href="backend/news?type=y-tuong"><i class="fa fa-circle-o"></i> <span>Ý tưởng</span></a></li>
+              </ul>
+            </li> 
             <!-- <li><a href="backend/partner"><i class="fa fa-circle-o"></i> <span>Quản lý đối tác</span></a></li>
             <li><a href="backend/feedback"><i class="fa fa-gear" aria-hidden="true"></i> <span>Ý kiến khách hàng</span></a></li> -->
             <li><a href="backend/contact"><i class="fa fa-envelope"></i> <span>Quản lý liên hệ</span></a></li>

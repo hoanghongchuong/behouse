@@ -55,8 +55,8 @@
 									</div>
 									
 									<div class="clearfix"></div>
-									
-									<div class="form-group hidden">
+									@if($_GET['type']=='thiet-ke')
+									<div class="form-group">
 								      	<label for="ten">Danh mục cha</label>
 								      	<select name="txtNewsCate" class="form-control">
 
@@ -64,7 +64,7 @@
 								      		<?php cate_parent($parent,0,"--",0) ?>
 								      	</select>
 									</div>
-									
+									@endif
 							    	<div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
 								      	<label for="ten">Tên</label>
 								      	<input type="text" id="txtName" name="txtName" value=""  class="form-control" />
@@ -87,8 +87,7 @@
 									
 									
 								</div>
-								<!-- <div class="col-md-6 col-xs-12">
-									@if($_GET['type']!='tin-tuc' && $_GET['type']!='tuyen-dung')
+								<div class="col-md-6 col-xs-12">									
 									<div class="form-group col-md-12 @if ($errors->first('fImagesBg')!='') has-error @endif">
 										<label for="file">File background</label>
 								     	<input type="file" id="file" name="fImagesBg" >
@@ -97,8 +96,7 @@
 								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('fImagesBg'); !!}</label>
 								      	@endif
 									</div>
-									@endif
-								</div> -->
+								</div>
 							</div>
 							<div class="clearfix"></div>
 	                  	</div><!-- /.tab-pane -->

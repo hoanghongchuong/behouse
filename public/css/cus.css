@@ -64,6 +64,10 @@
 	vertical-align: middle;
 	padding:120px 0;
 	margin:0 auto;
+	background: rgba(0,0,0,0.5);
+}
+.video_content:hover{
+	background: transparent;
 }
 .video_content h3{
 	text-transform: uppercase;
@@ -83,7 +87,7 @@
 	width: 100%;
 	float: left;
 	display: flex;
-	margin-bottom: 40px;
+	margin-bottom: 5px;
 }
 .box1-left{
 	position: relative;
@@ -136,4 +140,209 @@
 }
 .rolex-home .wrap:hover {
     background: transparent;
+}
+.my-post{
+	width: 100%;
+	float: left;
+	margin-bottom: 5px;
+	position: relative;
+}
+.my-post .background{
+	top:0;
+	left: 0;
+}
+.my-post .wrapx{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	-webkit-transition: all 0.5s ease;
+    overflow: hidden;
+}
+.my-post .wrapx:hover{
+	background: transparent;
+}
+.my-post .middle{
+	position: relative;
+    max-width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 200px 0px;
+    text-align: center;
+    /*display: table-cell;*/
+    vertical-align: middle;
+    color: #fff;
+}
+.my-post .middle h3{
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: bold;
+}
+.wrapx h4{
+	margin-top: 30px;
+}
+.wrapx h4 a{
+	color: #fff;
+	font-size: 17px;
+	text-transform: uppercase;
+	border:1px solid #fff;
+	padding: 10px 15px;
+}
+.submenux ul.dropdown-menu{
+	background: #222222;
+}
+.submenux ul.dropdown-menu li a{
+	color: #fff;
+	text-align: left;
+}
+.submenux ul.dropdown-menu li:hover a{
+	color: #000 !important;
+}
+.banner_idea{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.banner_idea img{
+	width: 100%;
+	max-height: 400px;
+}
+.banner_idea h2{
+	position: absolute;
+	text-align: center;
+	top:30%;
+	width: 100%;
+	color: #fff;
+	font-size: 40px;
+	/*margin:0 auto;*/
+}
+.content_detail_idea{
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+.name_idea{
+	font-weight: bold;
+	font-size: 26px;
+	margin-top: 0px;
+}
+.content_detail_idea .left{
+	border-right: 1px solid #ccc;
+}
+.content_detail_idea .media-heading a{
+	color: #000;
+	font-size: 15px;
+}
+.date-create{
+	font-size: 13px;
+	color: #595959 !important;
+}
+.info-brecrum{
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	color: #fff;
+}
+.content_idea{
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+}
+.name_idea{
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+.name_idea a:hover{
+	color: #589DCA;
+}
+.zoom{	
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.rollover i{
+	/*background-color: rgba(37,128,186,0.71);*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	display: none;
+}
+.rollover i:after{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+}
+.rollover:hover i{
+	display: block;
+
+}
+.zoom img{
+	transition: all 0.4s ease;
+}
+
+.zoom:hover img{
+	transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    /*background: rgba(0,0,0,0.5);*/
+    
+}
+.hover_img img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	opacity: 0;
+	z-index: 99999;
+	display: block;
+}
+.scroll-top{
+	position: fixed;
+	bottom: 15px;
+    width: 44px;
+    height: 44px;
+    right:15px;
+    text-align: center;
+    color: #fff;
+    padding-top: 14px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.2);
+    display: block;
+}
+.design img{
+	height: 270px;
+	width: 100%;
+}
+.mota_design{
+	overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   font-size: 14;        
+   line-height: 1.2;
+   max-height: 33.6px;
+}
+.box-item-design{
+	border:1px solid #ccc;
+	height: 362px;
+}
+.box-info-design{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

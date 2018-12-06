@@ -49,15 +49,15 @@
 								      	@endif
 									</div>									
 									<div class="clearfix"></div>
-									
-									<div class="form-group hidden">
+									@if($_GET['type']=='thiet-ke')
+									<div class="form-group">
 								      	<label for="ten">Danh mục bài viết</label>
 								      	<select name="txtNewsCate" class="form-control">
-
 								      		<option value="0">Chọn danh mục</option>
 								      		<?php cate_parent($parent,0,"--",$data->cate_id) ?>
 								      	</select>
 									</div>
+									@endif
 							    	<div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
 								      	<label for="ten">Tên</label>
 								      	<input type="text" name="txtName" id="txtName" value="{{ $data->name }}"  class="form-control" />
@@ -79,8 +79,7 @@
 									</div>
 									@endif
 								</div>
-								<!-- <div class="col-md-6 col-xs-12">
-									@if($_GET['type']!='tin-tuc' && $_GET['type']!='tuyen-dung')
+								<div class="col-md-6 col-xs-12">									
 									<div class="form-group @if ($errors->first('fImagesBg')!='') has-error @endif">
 										<div class="form-group">
 											<div class="img_backgound">
@@ -97,10 +96,8 @@
 								    	@if ($errors->first('fImagesBg')!='')
 								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('fImagesBg'); !!}</label>
 								      	@endif
-									</div>
-									@endif
-									
-								</div> -->
+									</div>									
+								</div>
 								<input type="hidden" name="txtCom" value="{{ @$_GET['type'] }}"/>
 							</div>
 							<div class="clearfix"></div>

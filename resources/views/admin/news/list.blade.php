@@ -28,7 +28,7 @@
     <small>@yield('action')</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="backend"><i class="fa fa-dashboard"></i> Home</a></li>
     <li><a href="javascript:">@yield('controller')</a></li>
     <li class="active">@yield('action')</li>
   </ol>
@@ -48,10 +48,10 @@
               <tr>
                 <th style="width: 20px;"><input type="checkbox" name="chonhet" class="minimal" id="chonhet" /></th>
                 <th class="text-center with_dieuhuong">Stt</th>
-               <!--  @if($_GET['type']!='gioi-thieu')
+                @if($_GET['type']=='thiet-ke')
                 <th>Danh mục cha</th>             
                 
-                @endif -->
+                @endif
                 <th>Hình ảnh</th>
                 <th>Tên bài viết</th>
                 <th class="text-center with_dieuhuong">Hoạt động</th>
@@ -64,7 +64,7 @@
               <tr>
                 <td><input type="checkbox" name="chon" id="chon" value="{{$item->id}}" class="chon" /></td>
                 <td class="text-center with_dieuhuong">{{$k+1}}</td>
-               <!--  @if($_GET['type']!='gioi-thieu')
+                @if($_GET['type']=='thiet-ke')
                 <td>
                   <?php  $parent = DB::table('news_categories')->where('id', $item->cate_id)->where('com', @$_GET['type'])->first();
                   ?>
@@ -73,10 +73,9 @@
                   @else
                     {{ 'None' }}
                   @endif
-                </td> -->
+                </td>         
+                @endif
                 <td><img src="{{ asset('upload/news/'.$item->photo) }}" onerror="this.src='{{ asset('public/admin_assets/images/no-image.jpg') }}';" class="img_product"  alt="NO PHOTO" /></td>
-                              
-               @endif
                 <td>{{$item->name}}
                 </td>
                                

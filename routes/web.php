@@ -20,11 +20,20 @@ Route::post('cartajax/add', ['as' => 'addProductToCartAjax', 'uses' => 'IndexCon
 Route::get('lien-he',['as'=>'getContact', 'uses'=>'ContactController@getContact']);
 Route::post('lien-he',['as'=>'postContact', 'uses'=>'ContactController@postContact']);
 
-
+Route::get('y-tuong','IndexController@idea');
+Route::get('y-tuong/{alias}.html', 'IndexController@detailIdea');
 // Ajax load more project
 Route::get('loadmore/project','IndexController@loadmoreProject')->name('loadmoreProject');
 
 Route::get('tu-van-thiet-ke','IndexController@consutalDesign');
+Route::get('thiet-ke','IndexController@design');
+Route::get('thiet-ke/{alias}.html','IndexController@designDetail');
+Route::get('thiet-ke/{alias}','IndexController@listDesign');
+
+
+
+
+
 
 Route::get('tim-kiem',['as'=>'search', 'uses'=>'IndexController@search']);
 Route::post('newsletter',['as'=>'postNewsletter', 'uses'=>'IndexController@postNewsletter']);

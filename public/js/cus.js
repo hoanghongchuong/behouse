@@ -6,4 +6,8 @@ $(document).ready(function(){
         el.height(windowHeight);
 
     }();
+
+    $('.scroll-top').on('click', function(){
+    	$(window).scrollTop(0).animate(500);
+    });
 });

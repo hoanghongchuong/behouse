@@ -12,7 +12,7 @@
 </div>
 <div class="box-content1">
 	<div class="box1-left rolex-home">
-		<a href="" title="">
+		<a href="{{url('thiet-ke')}}" title="">
 			<div class="background">
 				<img src="{{asset('public/images/kien-truc.jpg')}}">
 			</div>
@@ -24,7 +24,7 @@
 		</a>
 	</div>
 	<div class="box1-right rolex-home">
-		<a href="" title="">
+		<a href="{{url('dich-vu')}}" title="">
 			<div class="background">
 				<img src="{{asset('public/images/kien-truc.jpg')}}">
 			</div>
@@ -36,10 +36,42 @@
 		</a>
 	</div>
 </div>
-
+<div class="my-post">
+	<div class="background">
+		<img src="{{asset('public/images/background.jpg')}}">
+	</div>
+	<div class="wrapx">
+		<div class="middle">
+			<h3>Nội thất timecity part</h3>
+			<h4><a href="" title="">Xem thêm</a></h4>
+		</div>
+	</div>
+</div>
+<div class="my-post">
+	<div class="background">
+		<img src="{{asset('public/images/background.jpg')}}">
+	</div>
+	<div class="wrapx">
+		<div class="middle">
+			<h3>Nội thất timecity part</h3>
+			<h4><a href="" title="">Xem thêm</a></h4>
+		</div>
+	</div>
+</div>
+<div class="my-post">
+	<div class="background">
+		<img src="{{asset('public/images/background.jpg')}}">
+	</div>
+	<div class="wrapx">
+		<div class="middle">
+			<h3>Nội thất timecity part</h3>
+			<h4><a href="" title="">Xem thêm</a></h4>
+		</div>
+	</div>
+</div>
 <div class="box-content1">
 	<div class="box1-left rolex-home">
-		<a href="" title="">
+		<a href="{{url('gioi-thieu')}}" title="">
 			<div class="background">
 				<img src="{{asset('public/images/kien-truc.jpg')}}">
 			</div>
@@ -51,7 +83,7 @@
 		</a>
 	</div>
 	<div class="box1-right rolex-home">
-		<a href="" title="">
+		<a href="{{url('y-tuong')}}" title="">
 			<div class="background">
 				<img src="{{asset('public/images/kien-truc.jpg')}}">
 			</div>

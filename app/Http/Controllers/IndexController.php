@@ -618,7 +618,6 @@ class IndexController extends Controller {
     	dd($price);
     }
 
-
 	public function loadmoreProject(Request $req)
 	{
 		$offset = $req->offset;
@@ -633,83 +632,85 @@ class IndexController extends Controller {
 		return view('templates.store', compact('store'));
 	}
 
-	public function catalog()
-	{
-		$catalog = DB::table('lienket')->where('com','catalog')->first();
-		
-		return view('templates.catalog', compact('catalog'));
-	}
-
-	public function newProduct(Request $req)
-	{
-		$cate_pro = DB::table('product_categories')->where('status',1)->where('parent_id',0)->orderby('id','asc')->get();
-		$colors = DB::table('colors')->get();
-        $com = 'san-pham';
-        $products = DB::table('products')->where('status',1)->orderBy('id','desc');
-    		$limit = $req->view ? $req->view : 6;
-    		$sort = $req->sort ? $req->sort : 'asc';
-    		
-    		$price_from = $req->from ? $req->from : 0;
-    		$price_to = $req->to ? $req->to : 100000000;
-        	
-        	$products = DB::table('products')
-        	->where('status', 1)
-        	->orderBy('price', $sort);
-        	$appends = [];
-        	if($req->isMethod('GET')){
-        		$products = $products->whereBetween('price', [ $price_from, $price_to])
-        		->where('color_id', 'like', '%' . $req->color . '%');
-        		$viewx  = $req->view;
-        		$sortx  = $req->sort;
-        		$colorx	= $req->color;
-        		$appends = [
-        			'from'  => $price_from,
-        			'to'    => $price_to,
-        			'color' => $colorx,
-        			'view'  => $viewx,
-        			'sort'  => $sortx
-        		];
-        	};
-
-        	$products = $products->paginate($limit);		
-		return view('templates.hangmoi', compact('cate_pro', 'colors', 'products', 'price_from', 'price_to', 'viewx', 'sortx', 'colorx', 'appends'));
-	}
-	public function productSelling(Request $req)
-	{
-		$cate_pro = DB::table('product_categories')->where('status',1)->where('parent_id',0)->orderby('id','asc')->get();
-		$colors = DB::table('colors')->get();
-        $com = 'san-pham';
-        $products = DB::table('products')->where('status',1)->orderBy('id','desc');
-    		$limit = $req->view ? $req->view : 6;
-    		$sort = $req->sort ? $req->sort : 'asc';    		
-    		$price_from = $req->from ? $req->from : 0;
-    		$price_to = $req->to ? $req->to : 100000000;        	
-        	$products = DB::table('products')
-        	->where('status', 1)
-        	->orderBy('price', $sort);
-        	$appends = [];
-        	if($req->isMethod('GET')){
-        		$products = $products->whereBetween('price', [ $price_from, $price_to])
-        		->where('color_id', 'like', '%' . $req->color . '%');
-        		$viewx  = $req->view;
-        		$sortx  = $req->sort;
-        		$colorx	= $req->color;
-        		$appends = [
-        			'from'  => $price_from,
-        			'to'    => $price_to,
-        			'color' => $colorx,
-        			'view'  => $viewx,
-        			'sort'  => $sortx
-        		];
-        	};
-        	$products = $products->paginate($limit);		
-		return view('templates.banchay', compact('cate_pro', 'colors', 'products', 'price_from', 'price_to', 'viewx', 'sortx', 'colorx', 'appends'));
-	}
-
 	public function consutalDesign()
 	{
 		$com = 'tuvan';
-		return view('templates.consutal_design',compact('com'));
+		$title = "Tư vấn thiết kế";
+		return view('templates.consutal_design',compact('com','title'));
 	}
-
+	public function design()
+	{
+		$com='tuvan';
+		$title = 'Thiết kế';
+		$data = DB::table('news')->where('status',1)->where('com','thiet-ke')->orderBy('id','desc')->get();
+		return view('templates.design', compact('title','com','data'));
+	}
+	public function listDesign($alias)
+	{
+		$data = DB::table('news_categories')->where('alias',$alias)->first();
+		$categories = DB::table('news_categories')->where('parent_id',$data->id)->get();
+		$ids = [];
+		$ids[] = $data->id;
+		foreach($categories as $cate){
+			$ids[] = $cate->id;
+		}
+		$results = DB::table('news')->where('com','thiet-ke')->whereIn('cate_id', $ids)->orderBy('id','desc')->get();
+		if($data->title !=''){
+			$title = $data->title;
+		}else{
+			$title = $data->name;
+		}
+		$description = $data->description;
+		$keyword = $data->keyword;
+		$com = 'tuvan';
+		return view('templates.list_design', compact('data','title','keyword','description','com','results'));
+	}
+	public function designDetail($alias)
+	{
+		$data = DB::table('news')->where('com','thiet-ke')->where('alias',$alias)->first();
+		
+		if($data->title !=''){
+			$title = $data->title;
+		}else{
+			$title = $data->name;
+		}
+		$description = $data->description;
+		$keyword = $data->keyword;
+		$com = 'tuvan';
+		return view('templates.detail_design', compact('data','title','keyword','description','com'));
+	}
+	public function getDichvu()
+	{
+		$data = DB::table('about')->where('com','dich-vu')->first();
+		$title = 'Dịch vụ';
+		$com='tuvan';
+		return view('templates.dichvu', compact('data','title','com'));
+	}
+	public function idea()
+	{
+		$data = DB::table('news')->where('status',1)->where('com','y-tuong')->get();
+		// dd($data);
+		$com='tuvan';
+		$title='Ý tưởng';
+		return view('templates.idea', compact('data','title','com'));
+	}
+	public function detailIdea($alias)
+	{
+		$data = DB::table('news')->where('status',1)->where('com','y-tuong')->where('alias', $alias)->first();
+		$hot_news = DB::table('news')->where('status',1)
+			->where('com','y-tuong')
+			->where('noibat',1)
+			->take(8)
+			->orderBy('id','desc')
+			->get();
+		if(!empty($data->title)){
+				$title = $data->title;
+			}else{
+				$title = $data->name;
+			}
+		$keyword = $data->keyword;
+		$description = $data->description;
+		$com='tuvan';
+		return view('templates.detail_idea', compact('data','com','title','keyword','description','hot_news'));
+	}
 }

@@ -38,3 +38,4 @@
         </div>
     </div>
 </footer>
+<a href="javascript:;" class="scroll-top on"><i class="fa fa-angle-up"></i></a>
