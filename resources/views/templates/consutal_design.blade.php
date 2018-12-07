@@ -36,39 +36,19 @@
 		</a>
 	</div>
 </div>
+@foreach($posts as $post)
 <div class="my-post">
 	<div class="background">
-		<img src="{{asset('public/images/background.jpg')}}">
+		<img src="{{asset('upload/news/'.$post->background)}}">
 	</div>
 	<div class="wrapx">
 		<div class="middle">
-			<h3>Nội thất timecity part</h3>
-			<h4><a href="" title="">Xem thêm</a></h4>
+			<h3>{{$post->name}}</h3>
+			<h4><a href="{{url('thiet-ket/'.$post->alias.'.html')}}" title="">Xem thêm</a></h4>
 		</div>
 	</div>
 </div>
-<div class="my-post">
-	<div class="background">
-		<img src="{{asset('public/images/background.jpg')}}">
-	</div>
-	<div class="wrapx">
-		<div class="middle">
-			<h3>Nội thất timecity part</h3>
-			<h4><a href="" title="">Xem thêm</a></h4>
-		</div>
-	</div>
-</div>
-<div class="my-post">
-	<div class="background">
-		<img src="{{asset('public/images/background.jpg')}}">
-	</div>
-	<div class="wrapx">
-		<div class="middle">
-			<h3>Nội thất timecity part</h3>
-			<h4><a href="" title="">Xem thêm</a></h4>
-		</div>
-	</div>
-</div>
+@endforeach
 <div class="box-content1">
 	<div class="box1-left rolex-home">
 		<a href="{{url('gioi-thieu')}}" title="">

@@ -637,7 +637,9 @@ class IndexController extends Controller {
 		$com = 'tuvan';
 		$title = "Tư vấn thiết kế";
 		$video = DB::table('video')->first();
-		return view('templates.consutal_design',compact('com','title','video'));
+		$posts = DB::table('news')->where('com','thiet-ke')->take(3)->orderBy('id','desc')->get();
+
+		return view('templates.consutal_design',compact('com','title','video','posts'));
 	}
 	public function design()
 	{
