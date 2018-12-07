@@ -636,7 +636,8 @@ class IndexController extends Controller {
 	{
 		$com = 'tuvan';
 		$title = "Tư vấn thiết kế";
-		return view('templates.consutal_design',compact('com','title'));
+		$video = DB::table('video')->first();
+		return view('templates.consutal_design',compact('com','title','video'));
 	}
 	public function design()
 	{
@@ -668,7 +669,7 @@ class IndexController extends Controller {
 	public function designDetail($alias)
 	{
 		$data = DB::table('news')->where('com','thiet-ke')->where('alias',$alias)->first();
-		
+		$albums = DB::table('images')->where('news_id',$data->id)->get();
 		if($data->title !=''){
 			$title = $data->title;
 		}else{
@@ -677,7 +678,7 @@ class IndexController extends Controller {
 		$description = $data->description;
 		$keyword = $data->keyword;
 		$com = 'tuvan';
-		return view('templates.detail_design', compact('data','title','keyword','description','com'));
+		return view('templates.detail_design', compact('data','title','keyword','description','com','albums'));
 	}
 	public function getDichvu()
 	{

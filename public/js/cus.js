@@ -4,10 +4,10 @@ $(document).ready(function(){
         var windowHeight = $(window).height();
         // var headerHeight = $('.vk-header').height();
         el.height(windowHeight);
-
     }();
-
     $('.scroll-top').on('click', function(){
     	$(window).scrollTop(0).animate(500);
     });
+
+    
 });

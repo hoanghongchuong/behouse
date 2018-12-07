@@ -3,8 +3,8 @@
 <div class="box-video" style="background: url('{{asset('public/images/banner_video.jpg')}}');">
 	<div class="video_content">
 		<div class="middle">
-			<h3>Tại sao chọn chúng tôi</h3>
-			<div class="video-button" data-fancybox="video" href="https://www.youtube.com/embed/I6G1KgTtmFc">
+			<h3>{{$video->name}}</h3>
+			<div class="video-button" data-fancybox="video" href="https://www.youtube.com/embed/{{$video->code}}">
 				<img src="{{asset('public/images/videoplayer.png')}}">
 			</div>
 		</div>

@@ -40,15 +40,20 @@
 						        			@endforeach
 						        		</div>
 						        	@endif -->
-									
-									
 									<div class="clearfix"></div>
 									
-							    	
+							    	<div class="form-group">
+								      	<label for="desc">Tên</label>
+								      	<input type="text" name="name" class="form-control">
+									</div>
 									<div class="form-group">
-								      	<label for="desc">Link</label>
-								      	<input type="text" name="link" class="form-control">
-								</div>
+								      	<label for="desc">Mã video</label>
+								      	<input type="text" name="code" class="form-control">
+									</div>
+									<div class="form-group">
+								      	<label for="desc">Mô tả</label>
+								      	<textarea name="mota" class="form-control" rows="5"></textarea>
+									</div>
 								
 							</div>
 							<div class="clearfix"></div>

@@ -27,7 +27,7 @@
 	                <ul class="nav nav-tabs">
 	                  	<li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Thông tin chung</a></li>
 	                  	<li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Nội dung</a></li>
-	                  	@if($_GET['type']=='du-an')
+	                  	@if($_GET['type']=='thiet-ke')
 	                  	<li><a href="#tab_3" data-toggle="tab" aria-expanded="true">Album ảnh</a></li>
 	                  	@endif
 	                  	<li><a href="#tab_4" data-toggle="tab" aria-expanded="true">SEO</a></li>
@@ -120,13 +120,15 @@
 	                	<div class="tab-pane" id="tab_3">
 	                		<div class="form-group">
 	                			@foreach($news_img as $key => $item)
-		                        <div class="form-group" id="{!! $key !!}">
+		                        <div class="col-md-3" id="{!! $key !!}">
 		                            <img src="{!! asset('upload/albumnews/'.$item['photo']) !!}" style="max-width: 150px; margin: 20px;" idImg="{!! $item['id'] !!}" id="{!! $key !!}">
 		                            <a href="javascript:" type="button" id="del_img_news" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>
 		                        </div>
-		                      @endforeach
-	                  			<label class="control-label">Chọn ảnh</label>
-                      			<input id="input-2" name="detailImg[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true" data-allowed-file-extensions='["jpeg", "jpg", "png", "gif"]'>
+		                      	@endforeach
+	                  			<div class="row col-md-12">
+	                  				<label class="control-label">Chọn ảnh</label>
+                      				<input id="input-2" name="detailImg[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true" data-allowed-file-extensions='["jpeg", "jpg", "png", "gif"]'>
+	                  			</div>
 	                  		</div>
 	                  	</div>
 	                	<div class="tab-pane" id="tab_4">

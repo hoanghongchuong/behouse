@@ -44,11 +44,18 @@
 									
 									<div class="clearfix"></div>
 									
-							    	
+							    	<div class="form-group">
+								      	<label for="desc">Tên</label>
+								      	<input type="text" name="name" class="form-control" value="{{$data->name}}">
+									</div>
 									<div class="form-group">
-								      	<label for="desc">Link</label>
-								      	<input type="text" name="link" class="form-control" value="{{$data->link}}">
-								</div>
+								      	<label for="desc">Mã video</label>
+								      	<input type="text" name="code" class="form-control" value="{{$data->code}}">
+									</div>
+									<div class="form-group">
+								      	<label for="desc">Mô tả</label>
+								      	<textarea name="mota" class="form-control" rows="5">{!! $data->mota !!}</textarea>
+									</div>
 								
 							</div>
 							<div class="clearfix"></div>

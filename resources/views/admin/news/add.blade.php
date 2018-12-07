@@ -28,7 +28,7 @@
 	                <ul class="nav nav-tabs">
 	                  	<li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Thông tin chung</a></li>
 	                  	<li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Nội dung</a></li>
-	                  	@if($_GET['type']=='du-an')
+	                  	@if($_GET['type']=='thiet-ke')
 	                  	<li><a href="#tab_5" data-toggle="tab" aria-expanded="true">Album ảnh</a></li>
 	                  	@endif
 	                  	<li><a href="#tab_3" data-toggle="tab" aria-expanded="true">SEO</a></li>
